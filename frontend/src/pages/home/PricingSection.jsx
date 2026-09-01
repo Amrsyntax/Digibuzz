@@ -14,7 +14,7 @@ export function PricingSection() {
     },
     {
       name: 'Pro',
-      description: 'For creators growing their reach.',
+      description: 'For creators and growing businesses.',
       price: '19',
       features: [
         'Unlimited biolink pages',
@@ -33,7 +33,7 @@ export function PricingSection() {
     },
     {
       name: 'Business',
-      description: 'For teams managing multiple brands.',
+      description: 'For teams and multiple brands.',
       price: '49',
       features: [
         'Everything in Pro',
@@ -80,10 +80,10 @@ export function PricingSection() {
                 <small>/month</small>
               </div>
               <CheckList items={items} />
-              <Button variant="ghost" onClick={() => togglePlan(plan.name)}>
-                {isExpanded ? 'View less' : 'View all'}
+              <Button variant="ghost" onClick={() => togglePlan(plan.name)} className="pricing-card__toggle">
+                {isExpanded ? 'View less features' : 'View all features'}
               </Button>
-              <AppLink to="/register" className="btn btn--primary">
+              <AppLink to="/register" className="btn btn--primary pricing-card__cta">
                 Choose plan
               </AppLink>
             </Card>
